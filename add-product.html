@@ -46,9 +46,38 @@
                 </div>
 
                 <div class="form-row">
-
+                    <div class="form-group half">
+                        <label for="price">Price (Ksh)</label>
+                        <input type="number" id="price" name="price" step="0.01" placeholder="e.g. 500" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="stock">stock Quantity</label>
+                        <input type="number" id="stock" name="stock" min="0" placeholder="e.g. 100" required>
+                    </div>
                 </div>
 
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="size">size</label>
+                        <input type="text" id="size" name="size" placeholder="e.g. 50kg, 6m, 4x8ft">
+                    </div>
+                    <div class="form-group half">
+                        <label for="unit">Unit</label>
+                        <select name="unit" id="unit">
+                            <option value="pcs">pcs</option>
+                            <option value="bags">bags</option>
+                            <option value="sheets">sheets</option>
+                            <option value="kg">kg</option>
+                            <option value="litres">litres</option>
+                            <option value="metres">metres</option>
+                            <option value="bundles">bundles</option>
+                            <option value="rolls">rolls</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                
             </form>
 
         </div>
