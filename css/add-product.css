@@ -41,4 +41,21 @@ top-nav h1 {
   margin: 2.5rem auto;
   padding: 0 1.5rem;
 }
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.2rem;
+  margin-bottom: 2rem;
+}
+.card h2 {
+  color: #0f172a;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
 
+.card p {
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
