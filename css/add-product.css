@@ -32,7 +32,13 @@ top-nav h1 {
 }
 .top-nav nav a:hover,
 .top-nav nav a.active {
-  color: #fbbf24; /* Safety yellow accent */
+  color: #fbbf24; 
   border-bottom: 3px solid #fbbf24;
   padding-bottom: 4px;
 }
+.container {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
