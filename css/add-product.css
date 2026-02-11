@@ -23,3 +23,16 @@ top-nav h1 {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.top-nav nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  margin-left: 1.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.top-nav nav a:hover,
+.top-nav nav a.active {
+  color: #fbbf24; /* Safety yellow accent */
+  border-bottom: 3px solid #fbbf24;
+  padding-bottom: 4px;
+}
