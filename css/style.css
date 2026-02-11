@@ -2,34 +2,200 @@
    DASHBOARD (index.html)
 ================================ */
 
-/* Container holding all sales cards */
+/* ===============================
+   GLOBAL RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===============================
+   BODY
+================================ */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0b0f14; /* deep dark */
+    color: #e5e7eb;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===============================
+   HEADER / NAVBAR
+================================ */
+header {
+    background: #0f1115;
+    padding: 18px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 2px solid #76b900; /* NVIDIA green */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+header h1 {
+    color: #76b900;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+
+/* NAV LINKS */
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 1.8rem;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* underline animation */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #76b900;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #76b900;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ===============================
+   MAIN LAYOUT
+================================ */
+main {
+    flex: 1;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* ===============================
+   SECTION TITLE
+================================ */
+h2 {
+    margin-bottom: 20px;
+    color: #76b900;
+    font-size: 1.8rem;
+}
+
+
+/* ===============================
+   SALES GRID
+================================ */
 #salesList {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
-/* Individual sale card */
-#salesList .card {
-  border-left: 5px solid #1f3c88;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+/* ===============================
+   SALES CARD
+================================ */
+.card {
+    background: #141922;
+    padding: 18px;
+    border-radius: 12px;
+
+    border: 1px solid #1f2937;
+    border-left: 5px solid #76b900;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.55);
+
+    transition: 0.25s ease;
 }
 
-/* Hover effect for better UX */
-#salesList .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+/* Hover glow effect */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 18px rgba(118,185,0,0.35);
 }
 
-/* Headings inside cards */
-#salesList .card h3 {
-  margin-bottom: 0.5rem;
-  color: #1f3c88;
+
+/* Card text */
+.card h3 {
+    color: #76b900;
+    margin-bottom: 8px;
 }
 
-/* Paragraph spacing inside cards */
-#salesList .card p {
-  margin-bottom: 0.3rem;
-  font-size: 0.95rem;
+.card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-bottom: 4px;
+}
+
+
+/* ===============================
+   BUTTONS (optional)
+================================ */
+button {
+    background: #76b900;
+    color: black;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #8ee000;
+    box-shadow: 0 0 10px rgba(118,185,0,0.7);
+    transform: translateY(-2px);
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    background: #0f1115;
+    text-align: center;
+    padding: 15px;
+    color: #94a3b8;
+    border-top: 1px solid #1f2937;
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    main {
+        padding: 20px;
+    }
 }
