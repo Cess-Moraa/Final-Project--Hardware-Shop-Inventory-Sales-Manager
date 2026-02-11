@@ -86,3 +86,19 @@ form {
   background: #f8fafc;
   transition: all 0.2s ease;
 }
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.form-row .half {
+  flex: 1;
+  min-width: 220px;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
