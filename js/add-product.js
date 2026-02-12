@@ -14,3 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
          description: form.description.value,
       createdAt: new Date().toLocaleString()
     };
+        if (!product.name || !product.category) {
+      alert("Please fill in required fields");
+      return;
+    }
+    const products = getProducts();
