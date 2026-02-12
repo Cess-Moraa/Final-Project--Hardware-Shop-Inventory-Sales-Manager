@@ -19,3 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     const products = getProducts();
+    products.push(product);
+    saveProducts(products);
+    alert("Product added successfully!");
+    form.reset();
+  });
+});
