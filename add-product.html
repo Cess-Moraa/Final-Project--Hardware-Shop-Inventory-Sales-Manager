@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Product</title>
+  
+    <link rel="stylesheet" href="css/add-product.css">
+</head>
+<body>
+    <header class="top-nav">
+        <h1>Hardware Shop</h1>
+        <Nav>
+            <a href="index.html">Home</a>
+            <a href="inventory.html">Inventory</a>
+            <a href="add-product.html" class="active">Add Product</a>
+            <a href="about.html">About</a>
+        </Nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <h2>Add new Material</h2>
+            <p>Add new product here</p>
+            <form id="productform">
+                <div class="form-group">
+                    <label for="name">Name Of Product</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. cement, mabati, nails" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category *</label>
+                    <select id="category" name="category" required>
+                       <option value="">-- Choose --</option>
+                       <option value="Cement & Aggregates">Cement & Aggregates</option>
+                       <option value="Roofing">Roofing (Mabati, Tiles)</option>
+                       <option value="Timber & Boards">Timber & Boards</option>
+                       <option value="Steel & Reinforcement">Steel & Reinforcement</option>
+                       <option value="Plumbing">Plumbing</option>
+                       <option value="Electrical">Electrical</option>
+                       <option value="Paints & Decor">Paints & Decor</option>
+                       <option value="Fasteners">Fasteners (Nails, Screws)</option>
+                       <option value="Tiles & Flooring">Tiles & Flooring</option>
+                       <option value="Sanitaryware">Sanitaryware</option>
+                       <option value="Tools">Tools & Equipment</option>
+                       <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="price">Price (Ksh)</label>
+                        <input type="number" id="price" name="price" step="0.01" placeholder="e.g. 500" required>
+                    </div>
+                    <div class="form-group half">
+                        <label for="stock">stock Quantity</label>
+                        <input type="number" id="stock" name="stock" min="0" placeholder="e.g. 100" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label for="size">size</label>
+                        <input type="text" id="size" name="size" placeholder="e.g. 50kg, 6m, 4x8ft">
+                    </div>
+                    <div class="form-group half">
+                        <label for="unit">Unit</label>
+                        <select name="unit" id="unit">
+                            <option value="pcs">pcs</option>
+                            <option value="bags">bags</option>
+                            <option value="sheets">sheets</option>
+                            <option value="kg">kg</option>
+                            <option value="litres">litres</option>
+                            <option value="metres">metres</option>
+                            <option value="bundles">bundles</option>
+                            <option value="rolls">rolls</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="brand">brand / supplier</label>
+                    <input type="text" id="brand" name="brand" placeholder="e.g. Bamburi, Mombasa Cement, Bostik">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" rows="3" placeholder="Describe the product"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="reset" class="btn secondary">Clear</button>
+                    <button type="submit" class="btn primary">Add Product</button>
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+    <script src="js/storage.js"></script>
+    <script src="js/add-product.js"></script> 
+   
+</body>
+</html>
