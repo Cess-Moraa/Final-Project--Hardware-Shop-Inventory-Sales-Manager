@@ -1,3 +1,7 @@
+/* ===============================
+   ABOUT PAGE LOGIC
+================================ */
+
 document.addEventListener("DOMContentLoaded", () => {
   const countEl = document.getElementById("productCount");
 
@@ -5,5 +9,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const total = getProductCount();
   countEl.textContent = total;
-});
-
+})

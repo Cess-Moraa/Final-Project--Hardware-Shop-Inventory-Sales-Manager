@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const overlayText = document.querySelector(".video-overlay p");
+  const overlay = document.querySelector(".video-overlay p");
+  if (!overlay) return;
 
-  if (!overlayText) return;
+  const products = getProducts();
 
-  const total = getProductCount();
-
-  overlayText.textContent =
-    `Automated warehouse tracking ${total} products with real-time availability.`;
-});
+  overlay.textContent = `
+    Automated warehouse tracking ${products.length} products
+    with real-time availability.
+  `;
+    });
