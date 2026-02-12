@@ -1,22 +1,10 @@
-// inventory.js
-document.addEventListener("DOMContentLoaded", () => {
-  const table = document.querySelector("table");
+// storage.js
+// Central file for handling localStorage logic
 
-  if (!table) return;
+function getProducts() {
+  return JSON.parse(localStorage.getItem("products")) || [];
+}
 
-  const products = getProducts();
-
-  products.forEach((product, index) => {
-    const row = document.createElement("tr");
-
-    row.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${product.name}</td>
-      <td>${product.category}</td>
-      <td>${product.stock}</td>
-      <td>${product.price}</td>
-    `;
-
-    table.appendChild(row);
-  });
-});
+function saveProducts(products) {
+  localStorage.setItem("products", JSON.stringify(products));
+}

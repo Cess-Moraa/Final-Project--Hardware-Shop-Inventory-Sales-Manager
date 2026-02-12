@@ -1,10 +1,9 @@
-/* =====================================================
-   INVENTORY PAGE (inventory.html)
-===================================================== */
+// inventory.js
+document.addEventListener("DOMContentLoaded", () => {
+  const table = document.querySelector("table");
 
-const inventoryTable = document.querySelector("table");
+  if (!table) return;
 
-if (inventoryTable && window.location.pathname.includes("inventory")) {
   const products = getProducts();
 
   products.forEach((product, index) => {
@@ -14,10 +13,10 @@ if (inventoryTable && window.location.pathname.includes("inventory")) {
       <td>${index + 1}</td>
       <td>${product.name}</td>
       <td>${product.category}</td>
-      <td>${product.stock} ${product.unit}</td>
-      <td>KES ${product.price}</td>
+      <td>${product.stock}</td>
+      <td>${product.price}</td>
     `;
 
-    inventoryTable.appendChild(row);
+    table.appendChild(row);
   });
-}
+});
