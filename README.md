@@ -97,3 +97,8 @@ A simple hardware shop inventory and management system built with HTML, CSS, and
 ## ✅ Final Note
 
 This project was built for educational purposes and demonstrates front-end development best practices using vanilla web technologies.
+
+## ## 📜 License
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files, to deal in the Software without restriction.
